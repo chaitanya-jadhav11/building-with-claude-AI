@@ -1,0 +1,28 @@
+[
+  {
+    "prompt_inputs": {},
+    "solution_criteria": [
+      "Handles empty input gracefully without crashing",
+      "Provides clear feedback or default behavior when no input is provided"
+    ],
+    "task_description": "",
+    "scenario": "Test with empty or minimal input to verify default behavior and error handling"
+  },
+  {
+    "prompt_inputs": {},
+    "solution_criteria": [
+      "Unable to generate test case - no task description provided",
+      "Cannot proceed without allowed input keys specification"
+    ],
+    "task_description": "",
+    "scenario": "Test with extremely large or complex input to assess scalability and performance limits"
+  },
+  {
+    "prompt_inputs": {},
+    "solution_criteria": [
+      "Unable to generate test case - task_description and allowed_input_keys are empty"
+    ],
+    "task_description": "",
+    "scenario": "Test with edge case inputs containing special characters, unusual formatting, or conflicting requirements"
+  }
+]
