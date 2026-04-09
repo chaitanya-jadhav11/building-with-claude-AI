@@ -1,0 +1,81 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "180",
+      "weight": "72",
+      "goal": "Marathon preparation with carbohydrate loading for endurance performance",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Total daily caloric intake meets or exceeds 3000 calories",
+      "Carbohydrates comprise at least 60% of total calories",
+      "Meal plan includes exactly 3 meals and is presented in compact format"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a high-endurance athlete (marathon runner) requiring 3000+ calorie intake with carbohydrate loading focus"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "75 kg",
+      "goal": "Lean muscle maintenance for boxing competition while staying under 2000 calories",
+      "restrictions": "No dairy, prefers whole foods"
+    },
+    "solution_criteria": [
+      "Meal plan is exactly 1 day and includes 3+ meals",
+      "Total daily calories do not exceed 2000",
+      "All meals are dairy-free and whole food based",
+      "Plan maintains adequate protein for athletic performance"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a sport that requires weight management (boxer/wrestler) creating a lean meal plan under 2000 calories while maintaining performance"
+  },
+  {
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "85 kg",
+      "goal": "Muscle gain with protein-focused meal distribution",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan contains 5-6 meals distributed throughout the day",
+      "Total daily protein is at least 1.6g per kg of body weight (136g minimum)",
+      "Protein is evenly distributed across meals (roughly 20-30g per meal)",
+      "Plan is presented in compact, concise format suitable for one day"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a strength-training athlete (bodybuilder) emphasizing protein distribution across 5-6 meals throughout the day"
+  },
+  {
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "72 kg",
+      "goal": "muscle gain and endurance training",
+      "restrictions": "vegan, no animal products"
+    },
+    "solution_criteria": [
+      "Meal plan covers all 3 meals and snacks for one day",
+      "All meals contain complete plant-based proteins with complementary amino acids",
+      "Plan includes iron, B12, calcium, and omega-3 rich foods appropriate for vegan athletes",
+      "Caloric intake and macronutrient distribution supports muscle gain and endurance goals"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a vegan/plant-based athlete requiring complete protein sources and micronutrient optimization without animal products"
+  },
+  {
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "75 kg",
+      "goal": "Build muscle and improve athletic performance",
+      "restrictions": "gluten-free, dairy-free, nut allergy"
+    },
+    "solution_criteria": [
+      "Meal plan includes 4 meals/snacks distributed throughout the day",
+      "All meals are gluten-free, dairy-free, and nut-free with no cross-contamination risks",
+      "Provides adequate protein (approximately 1.6-2.2g per kg body weight) to support muscle building",
+      "Includes balanced macronutrients and micronutrients despite dietary restrictions"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with an athlete with multiple dietary restrictions (gluten-free, dairy-free, nut allergy) ensuring nutritional completeness despite limitations"
+  }
+]

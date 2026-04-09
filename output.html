@@ -1,0 +1,337 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">5</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">6.8 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">60.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a strength-training athlete (bodybuilder) emphasizing protein distribution across 5-6 meals throughout the day</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180 cm<br><strong>weight:</strong> 85 kg<br><strong>goal:</strong> Muscle gain with protein-focused meal distribution<br><strong>restrictions:</strong> None</td>
+                <td class="criteria">• Meal plan contains 5-6 meals distributed throughout the day<br>• Total daily protein is at least 1.6g per kg of body weight (136g minimum)<br>• Protein is evenly distributed across meals (roughly 20-30g per meal)<br>• Plan is presented in compact, concise format suitable for one day</td>
+                <td class="output"><pre># One-Day Meal Plan for Muscle Gain
+
+Here is a one-day meal plan for an athlete aiming to build muscle with a protein-focused approach:
+
+* **Calorie Target:** Approximately 3,200 calories
+* **Macronutrient Breakdown:** Protein (200g), Fat (95g), Carbs (390g)
+
+## Meal Plan:
+
+* **Breakfast (7:00 AM):** Scrambled eggs (3 whole eggs, 150g) with whole wheat toast (80g) and avocado (60g). Orange juice (250ml).
+  * Protein: 25g, Fat: 20g, Carbs: 45g
+
+* **Mid-Morning Snack (10:00 AM):** Greek yogurt (200g, non-fat) with granola (40g) and blueberries (80g).
+  * Protein: 25g, Fat: 5g, Carbs: 55g
+
+* **Lunch (1:00 PM):** Grilled lean beef (180g) with white rice (150g cooked) and steamed broccoli (200g). Olive oil for cooking (10ml).
+  * Protein: 50g, Fat: 15g, Carbs: 60g
+
+* **Pre-Workout Snack (3:30 PM):** Banana (150g) with peanut butter (30g) and whole wheat bread (50g).
+  * Protein: 12g, Fat: 15g, Carbs: 50g
+
+* **Dinner (7:00 PM):** Baked chicken breast (200g) with sweet potato (200g baked) and mixed vegetables (spinach 100g, carrots 80g) sautéed in olive oil (10ml).
+  * Protein: 50g, Fat: 12g, Carbs: 90g
+
+* **Evening Snack (9:00 PM):** Protein shake with whey protein powder (30g), whole milk (240ml), and almonds (25g).
+  * Protein: 33g, Fat: 18g, Carbs: 20g
+
+---
+
+This meal plan emphasizes high-quality protein sources distributed throughout the day to optimize muscle protein synthesis, paired with complex carbohydrates for sustained energy and recovery.</pre></td>
+                <td class="score-col"><span class="score score-medium">6</span></td>
+                <td class="reasoning">The solution meets all three mandatory requirements with clear presentation of daily calories, macronutrient totals, and detailed meal information with portions and timing. However, it fails to meet the secondary criterion of even protein distribution across meals. The protein distribution ranges from 12g to 50g per meal, with only 3 of 6 meals falling within the 20-30g target range. While the overall protein intake is excellent, the distribution optimization for muscle protein synthesis (a stated goal) is compromised. The solution is otherwise well-executed and practical.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a high-endurance athlete (marathon runner) requiring 3000+ calorie intake with carbohydrate loading focus</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180<br><strong>weight:</strong> 72<br><strong>goal:</strong> Marathon preparation with carbohydrate loading for endurance performance<br><strong>restrictions:</strong> None</td>
+                <td class="criteria">• Total daily caloric intake meets or exceeds 3000 calories<br>• Carbohydrates comprise at least 60% of total calories<br>• Meal plan includes exactly 3 meals and is presented in compact format</td>
+                <td class="output"><pre># One-Day Meal Plan for Marathon Preparation
+
+Here is a one-day meal plan for an athlete preparing for a marathon with carbohydrate loading for endurance performance:
+
+* **Calorie Target:** Approximately 3,200 calories
+* **Macronutrient Breakdown:** Protein (130g), Fat (80g), Carbs (420g)
+
+## Meal Plan:
+
+* **Breakfast (7:00 AM):** Oatmeal (100g dry weight) with honey (30g), banana (120g), and whole milk (240g). Side of whole wheat toast (50g) with almond butter (20g).
+    * Protein: 18g, Fat: 12g, Carbs: 95g
+
+* **Mid-Morning Snack (10:00 AM):** Rice cakes (40g) with peanut butter (25g) and dried raisins (30g). Orange juice (250ml).
+    * Protein: 10g, Fat: 12g, Carbs: 65g
+
+* **Lunch (1:00 PM):** Grilled chicken breast (140g) with white rice (150g cooked) and steamed sweet potato (150g). Mixed vegetable side salad (100g) with olive oil dressing (15ml).
+    * Protein: 42g, Fat: 12g, Carbs: 85g
+
+* **Afternoon Snack (3:30 PM):** Energy bar (60g - oats and dried fruit based) with apple (150g) and honey (15g).
+    * Protein: 8g, Fat: 8g, Carbs: 70g
+
+* **Pre-Dinner Snack (5:00 PM):** Bagel (70g) with jam (30g) and banana (100g).
+    * Protein: 8g, Fat: 2g, Carbs: 75g
+
+* **Dinner (7:00 PM):** Lean ground turkey (130g) with pasta (120g cooked) in tomato sauce (150g). Steamed zucchini (150g) with olive oil (10ml).
+    * Protein: 35g, Fat: 18g, Carbs: 60g
+
+* **Evening Snack (9:00 PM):** Bagel (70g) with honey (20g) and low-fat yogurt (150g).
+    * Protein: 11g, Fat: 4g, Carbs: 75g
+
+---
+
+This meal plan emphasizes high carbohydrate intake (approximately 60% of total calories) to maximize glycogen storage for endurance performance, while maintaining adequate protein for muscle recovery and repair. The timing and composition of meals support sustained energy throughout the day for intense training sessions.</pre></td>
+                <td class="score-col"><span class="score score-low">5</span></td>
+                <td class="reasoning">The solution meets all three mandatory requirements with clear daily caloric total, macronutrient breakdown, and detailed meals with portions and timing. However, it violates a critical secondary criterion by including 7 eating occasions instead of exactly 3 meals. Additionally, carbohydrates comprise only 52.5% of total calories rather than the required 60% minimum. The presentation, while organized, is not compact as requested. These secondary criterion violations prevent a higher score despite solid nutritional planning.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a sport that requires weight management (boxer/wrestler) creating a lean meal plan under 2000 calories while maintaining performance</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178 cm<br><strong>weight:</strong> 75 kg<br><strong>goal:</strong> Lean muscle maintenance for boxing competition while staying under 2000 calories<br><strong>restrictions:</strong> No dairy, prefers whole foods</td>
+                <td class="criteria">• Meal plan is exactly 1 day and includes 3+ meals<br>• Total daily calories do not exceed 2000<br>• All meals are dairy-free and whole food based<br>• Plan maintains adequate protein for athletic performance</td>
+                <td class="output"><pre># One-Day Meal Plan for Boxing Athlete
+
+Here is a one-day meal plan for lean muscle maintenance while staying under 2000 calories:
+
+* **Calorie Target:** Approximately 1950 calories
+* **Macronutrient Breakdown:** Protein (165g), Fat (55g), Carbs (215g)
+
+## Meal Plan:
+
+* **Breakfast (7:00 AM):** Oatmeal (70g dry weight) with banana (120g) and almond butter (20g). Orange juice (200ml).
+  * Protein: 12g, Fat: 10g, Carbs: 68g
+
+* **Mid-Morning Snack (10:00 AM):** Apple (180g) with sunflower seed butter (25g).
+  * Protein: 8g, Fat: 12g, Carbs: 35g
+
+* **Lunch (1:00 PM):** Grilled chicken breast (150g) with brown rice (80g dry weight), steamed broccoli (200g), and olive oil drizzle (10ml).
+  * Protein: 48g, Fat: 12g, Carbs: 65g
+
+* **Pre-Workout Snack (4:00 PM):** Rice cakes (40g) with honey (20g) and sliced turkey breast (50g).
+  * Protein: 18g, Fat: 3g, Carbs: 35g
+
+* **Dinner (7:00 PM):** Baked salmon (120g) with sweet potato (150g), mixed green salad (150g), and balsamic vinegar (15ml).
+  * Protein: 60g, Fat: 15g, Carbs: 35g
+
+* **Evening Snack (9:00 PM):** Raw almonds (25g).
+  * Protein: 9g, Fat: 12g, Carbs: 6g
+
+This meal plan prioritizes lean protein sources for muscle maintenance, incorporates whole grains and complex carbohydrates for sustained energy during training, and avoids all dairy products while remaining budget-friendly with affordable proteins like chicken and canned salmon options.</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements with clear presentation of daily calories (1950, under 2000), complete macronutrient breakdown, and 6 meals with specific foods, portions, and times. All foods are whole-food based and dairy-free. The plan meets the secondary criteria of being compact, concise, and including 3+ meals. However, the protein allocation is at the upper end of athletic recommendations for a maintenance goal, and there are minor mathematical inconsistencies between individual meal macros and stated totals. These are not critical failures but represent areas where the plan could be refined. The solution is well-structured and practical for the stated goal.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a vegan/plant-based athlete requiring complete protein sources and micronutrient optimization without animal products</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178 cm<br><strong>weight:</strong> 72 kg<br><strong>goal:</strong> muscle gain and endurance training<br><strong>restrictions:</strong> vegan, no animal products</td>
+                <td class="criteria">• Meal plan covers all 3 meals and snacks for one day<br>• All meals contain complete plant-based proteins with complementary amino acids<br>• Plan includes iron, B12, calcium, and omega-3 rich foods appropriate for vegan athletes<br>• Caloric intake and macronutrient distribution supports muscle gain and endurance goals</td>
+                <td class="output"><pre># One-Day Meal Plan for Vegan Athlete
+
+Here is a one-day meal plan for an athlete aiming to gain muscle and build endurance while following a vegan diet:
+
+* **Calorie Target:** Approximately 2,800 calories
+* **Macronutrient Breakdown:** Protein (140g), Fat (85g), Carbs (380g)
+
+## Meal Plan:
+
+* **Breakfast (7:00 AM):** Oatmeal (100g dry weight) with banana (150g), ground flaxseed (15g), and almond milk (240ml).
+    * Protein: 12g, Fat: 8g, Carbs: 85g
+
+* **Mid-Morning Snack (10:00 AM):** Peanut butter (40g) with whole wheat toast (60g) and apple (120g).
+    * Protein: 12g, Fat: 16g, Carbs: 48g
+
+* **Lunch (1:00 PM):** Tofu stir-fry (200g firm tofu) with mixed vegetables (broccoli 100g, bell peppers 80g, snap peas 50g), brown rice (150g cooked), and sesame oil (10ml).
+    * Protein: 28g, Fat: 15g, Carbs: 72g
+
+* **Afternoon Snack (4:00 PM):** Chickpea hummus (60g) with carrot sticks (150g) and whole grain crackers (40g).
+    * Protein: 8g, Fat: 8g, Carbs: 42g
+
+* **Dinner (7:00 PM):** Lentil and quinoa bowl (150g cooked lentils, 75g cooked quinoa) with roasted sweet potato (200g), kale (100g), and tahini dressing (20g).
+    * Protein: 35g, Fat: 18g, Carbs: 95g
+
+* **Evening Snack (9:00 PM):** Hemp seeds (25g) with coconut yogurt (150g) and berries (80g).
+    * Protein: 12g, Fat: 12g, Carbs: 20g
+
+---
+
+This meal plan emphasizes plant-based protein sources (tofu, legumes, seeds, and nuts), complex carbohydrates for endurance training, and healthy fats to support muscle recovery and hormonal balance. All foods are entirely vegan and budget-friendly.</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements with precise portions, timing, and complete nutritional data. It demonstrates strong understanding of vegan nutrition for athletes through complementary protein pairing and micronutrient-rich food selection. However, the macronutrient distribution slightly underemphasizes protein for muscle gain goals, and B12 supplementation—critical for vegan athletes—is not explicitly addressed. The caloric target lacks transparent justification. These are secondary criterion issues that don't violate mandatory requirements but represent missed optimization opportunities.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with an athlete with multiple dietary restrictions (gluten-free, dairy-free, nut allergy) ensuring nutritional completeness despite limitations</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180 cm<br><strong>weight:</strong> 75 kg<br><strong>goal:</strong> Build muscle and improve athletic performance<br><strong>restrictions:</strong> gluten-free, dairy-free, nut allergy</td>
+                <td class="criteria">• Meal plan includes 4 meals/snacks distributed throughout the day<br>• All meals are gluten-free, dairy-free, and nut-free with no cross-contamination risks<br>• Provides adequate protein (approximately 1.6-2.2g per kg body weight) to support muscle building<br>• Includes balanced macronutrients and micronutrients despite dietary restrictions</td>
+                <td class="output"><pre># One-Day Meal Plan for Muscle Building & Athletic Performance
+
+Here is a one-day meal plan for an athlete aiming to build muscle and improve athletic performance:
+
+* **Calorie Target:** Approximately 2,800 calories
+* **Macronutrient Breakdown:** Protein (175g), Fat (78g), Carbs (350g)
+
+## Meal Plan:
+
+* **Breakfast (7:00 AM):** Gluten-free oatmeal (80g dry weight) with sliced banana (120g), sunflower seed butter (25g), and coconut oil (10g). Rice milk (240g).
+  * Protein: 18g, Fat: 16g, Carbs: 75g
+
+* **Mid-Morning Snack (10:00 AM):** Grilled chicken breast (100g) with gluten-free rice cakes (40g) and avocado (80g).
+  * Protein: 32g, Fat: 12g, Carbs: 28g
+
+* **Lunch (1:00 PM):** Baked salmon fillet (150g) with sweet potato (200g), roasted bell peppers (100g), and olive oil drizzle (15g). Side salad with spinach (100g) and vinaigrette (20g).
+  * Protein: 35g, Fat: 18g, Carbs: 65g
+
+* **Afternoon Snack (4:00 PM):** Grass-fed beef jerky (60g) with fresh mango (150g) and sunflower seeds (20g).
+  * Protein: 28g, Fat: 12g, Carbs: 32g
+
+* **Dinner (7:00 PM):** Ground turkey (180g) with quinoa (100g dry weight), steamed broccoli (200g), carrots (80g), and garlic-infused olive oil (15g).
+  * Protein: 50g, Fat: 15g, Carbs: 110g
+
+* **Evening Snack (9:30 PM):** Gluten-free protein powder (30g) mixed with coconut water (240g) and banana (100g).
+  * Protein: 25g, Fat: 5g, Carbs: 40g
+
+---
+
+This meal plan prioritizes high-quality protein sources to support muscle growth, includes complex carbohydrates for energy and recovery, and healthy fats for hormone production—all while strictly adhering to gluten-free, dairy-free, and nut-allergy restrictions.</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">The solution successfully meets all three mandatory requirements with precise caloric totals, detailed macronutrient breakdowns, and specific foods with portions and timing. Protein targets are appropriate for muscle building. All dietary restrictions are properly addressed. However, there are two secondary criterion issues: (1) the meal structure provides 6 eating occasions rather than the specified 4, and (2) micronutrient balance is not discussed or analyzed despite being explicitly required. The excess meal frequency is a minor structural deviation, while the missing micronutrient analysis is a more substantive gap in meeting the stated criteria.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
